@@ -16,7 +16,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'faker'
-gem 'ominauth-google-oauth2'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   gem 'byebug', platform: :mri
