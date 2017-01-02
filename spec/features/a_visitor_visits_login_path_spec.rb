@@ -12,7 +12,7 @@ describe "visitor" do
 
       expect(page).to have_content("WorkaDay")
       expect(page).to have_content("Log In")
-      expect(page).to have_button("SIGN IN WITH GOOGLE")
+      expect(page).to have_link("Sign In With Google")
     end
   end
 end
