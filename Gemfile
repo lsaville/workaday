@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'faker'
 gem 'omniauth-google-oauth2'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'byebug', platform: :mri
