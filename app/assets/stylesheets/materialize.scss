@@ -4,7 +4,8 @@
 // @import "materialize/components/prefixer";
 @import "materialize/components/mixins";
 @import "materialize/components/color";
-
+$primary-color: color("blue", "darken-4") !default;
+$secondary-color: color("light-blue", "lighten-1") !default;
 // Variables;
 @import "materialize/components/variables";
 
