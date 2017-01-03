@@ -2,6 +2,7 @@ require 'rails_helper'
 
 describe 'visitor' do
   before(:each) do
+    include Capybara::DSL
     Capybara.app = Workaday::Application
     stub_omniauth
   end
@@ -26,7 +27,7 @@ describe 'visitor' do
 
   def stub_omniauth
     OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
       provider: 'google_oauth2',
       uid: '543243',
       info: {
