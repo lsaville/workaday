@@ -5,7 +5,7 @@ describe 'supervisor'do
     scenario 'see all exiting projects' do
       projects = create_list(:project, 3)
       supervisor = create(:user)
-
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(supervisor)
       visit projects_path
 
       expect(page).to have_content("All Projects")
