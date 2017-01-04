@@ -1,25 +1,21 @@
 require 'rails_helper'
 
-describe 'visitor' do
-  context 'google login' do
-    scenario 'they click login and are redirected' do
+describe 'user' do
+  context 'already logged in' do
+    scenario 'they log out' do
       stub_omniauth
-      visit root_path
-
-      click_on "Login or Create Account"
-
-      expect(page.status_code).to eq(200)
-      expect(current_path).to eq(login_path)
-
+      visit login_path
       click_on "Sign In With Google"
 
-      expect(current_path).to eq(dashboard_path)
-      expect(page).to have_content("Frank")
-      expect(page).to have_content("Logout")
-      expect(page).to_not have_content("Login")
+      click_on "Logout"
+
+      expect(current_path).to eq(login_path)
+      expect(page).to have_content("Sign In With Google")
+      expect(page).to have_content("Login or Create Account")
+      expect(page).to_not have_content("Logout")
     end
   end
-
+  
   def stub_omniauth
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
