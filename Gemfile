@@ -18,6 +18,7 @@ gem 'figaro'
 gem 'faker'
 gem 'omniauth-google-oauth2'
 gem 'materialize-sass'
+gem 'react-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
