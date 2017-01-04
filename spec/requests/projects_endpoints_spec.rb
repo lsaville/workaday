@@ -5,7 +5,7 @@ describe 'projects endpoint' do
     it 'returns a collection of projects' do
       projects = create_list(:project, 3)
 
-      get 'api/v1/projects'
+      get '/api/v1/projects'
 
       response_comments = JSON.parse(response.body)
       first = response_comments.first
