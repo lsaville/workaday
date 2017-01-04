@@ -7,4 +7,12 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy'
 
   get '/dashboard', to: 'dashboard#index'
+
+  namespace :api do
+    namespace :v1 do
+      namespace :projects do
+        get '', to: 'projects#index'
+      end
+    end
+  end
 end
