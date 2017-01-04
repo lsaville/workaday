@@ -1,14 +1,9 @@
 require 'rails_helper'
 
 describe 'visitor' do
-  before(:each) do
-    include Capybara::DSL
-    Capybara.app = Workaday::Application
-    stub_omniauth
-  end
-
   context 'google login' do
     scenario 'they click login and are redirected' do
+      stub_omniauth
       visit root_path
 
       click_on "Login or Create Account"

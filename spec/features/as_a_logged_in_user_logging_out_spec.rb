@@ -1,14 +1,9 @@
 require 'rails_helper'
 
 describe 'user' do
-  before(:each) do
-    include Capybara::DSL
-    Capybara.app = Workaday::Application
-    stub_omniauth
-  end
-
   context 'already logged in' do
     scenario 'they log out' do
+      stub_omniauth
       visit login_path
       click_on "Sign In With Google"
 
