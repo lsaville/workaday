@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :user do
-    provider "MyString"
-    uid "MyString"
-    name "MyString"
-    email "MyString"
-    oauth_token "MyString"
-    oauth_expires_at "2017-01-02 15:51:32"
+    provider "google_oauth2"
+    uid Faker::Number.number(10)
+    name Faker::Name.last_name
+    email Faker::Internet.email
+    oauth_token Faker::Number.number(7)
+    oauth_expires_at Faker::Time.forward(30, :morning)
   end
 end
