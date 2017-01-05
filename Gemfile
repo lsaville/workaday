@@ -21,9 +21,11 @@ gem 'materialize-sass'
 gem 'react-rails'
 
 group :development, :test do
+  gem 'poltergeist'
   gem 'byebug', platform: :mri
   gem 'pry'
   gem 'rspec-rails'
+  gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'launchy'
