@@ -10,11 +10,12 @@ var AllProjects = React.createClass({
   render() {
     var projects = this.state.projects.map((project) => {
       return(
-        <div key={project.id} className='project-card'>
+        <div key={project.id} className='project-card container z-depth-2'>
           <h3>{project.title}</h3>
           <p>lat: {project.lat}</p>
           <p>lng: {project.lng}</p>
-          <p>{project.details}</p>
+          <div className='details'>{project.details}</div>
+          <div id='map-small' className=''></div>
         </div>
       )
     }); 
