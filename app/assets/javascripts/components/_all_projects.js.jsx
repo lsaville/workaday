@@ -10,7 +10,7 @@ var AllProjects = React.createClass({
   render() {
     var projects = this.state.projects.map((project) => {
       return(
-        <div key={project.id} className='project'>
+        <div key={project.id} className='project-card'>
           <h3>{project.title}</h3>
           <p>lat: {project.lat}</p>
           <p>lng: {project.lng}</p>
