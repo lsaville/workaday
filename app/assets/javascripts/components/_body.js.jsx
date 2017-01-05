@@ -2,7 +2,7 @@ var Body = React.createClass({
   render(){
     return (
       <div>
-        <AllProjects />
+        <AllProjects map_key={this.props.map_key}/>
       </div>
     )
   }
