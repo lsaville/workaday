@@ -18,7 +18,7 @@ var AllProjects = React.createClass({
             <p>lng: {project.lng}</p>
             <div className='details'>{project.details}</div>
           </div>
-          <Map map_key={this.props.map_key} id={project.id} />
+          <Map map_key={this.props.map_key} project={project} />
         </div>
       )
     }); 
