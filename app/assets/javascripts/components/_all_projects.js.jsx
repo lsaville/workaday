@@ -8,14 +8,6 @@ var AllProjects = React.createClass({
   },
 
   render() {
-    var map = function initMap(project){
-      var location = {lat: project.lat, lng: project.lng} 
-      var map = new google.maps.Map(document.getElementById('map'), {zoom: 12, center: location});
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map
-      });
-    };
     var map_key = this.props.map_key;
     var projects = this.state.projects.map((project) => {
       return(
@@ -26,18 +18,7 @@ var AllProjects = React.createClass({
             <p>lng: {project.lng}</p>
             <div className='details'>{project.details}</div>
           </div>
-          <div id='map-small' className='right'></div>
-          <script>
-            var map = function initMap(project){
-              var location = {lat: project.lat, lng: project.lng} 
-              var map = new google.maps.Map(document.getElementById('map'), {zoom: 12, center: location});
-              var marker = new google.maps.Marker({
-                position: location,
-                map: map
-              });
-            };
-          </script>
-          <script async defer src={"https://maps.googleapis.com/maps/api/js?key=" + map_key + "&callback=initMap"}></script>
+          <Map map_key={this.props.map_key} id={project.id} />
         </div>
       )
     }); 
