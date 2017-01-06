@@ -24,7 +24,7 @@ var Map = React.createClass({
   render(){
     return(
       <div>
-        <div id={"map-small"} ref='map_canvas' className='right'>I will be a map someday!</div>
+        <div id={"map-small"} ref='map_canvas' className='right z-depth-2'>I will be a map someday!</div>
       </div>
     )
   }
