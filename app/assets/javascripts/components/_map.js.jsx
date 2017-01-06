@@ -2,45 +2,31 @@ var Map = React.createClass({
   componentDidMount() {
     this.map = this.createMap();
     this.marker = this.createMarker();
-  },
-
-  location: {
-    lat: this.props.project.lat,
-    lng: this.props.project.lng
+    this.location = new google.maps.LatLng(this.props.project.lat, this.props.project.lng);
   },
 
   createMap: function(){
     var mapOptions = {
-      zoom: 12,
-      center: location
+      zoom: 7,
+      center: this.location
     }
-    return new google.maps.Map(this.refs.map_canvas.getDOMNode(), mapOptions);
+    new google.maps.Map(this.refs.map_canvas, mapOptions);
   },
 
   createMarker: function(){
     var markerOptions = {
-      position: location,
+      position: this.location,
       map: this.map
     }
+    return new google.maps.Marker(markerOptions);
   },
 
   render(){
-//    function initMap() {
-//      var location = {lat: this.props.project.lat, lng: this.props.project.lng};
-//      var map = new google.maps.Map(document.getElementById('map-small_' + this.project.id), {
- //       zoom: 12,
-//        center: location
-//      });
-//      var marker = new google.maps.Marker({
-//        position: location,
-//        map: map
-//      });
-//    }
     var map_key = this.props.map_key;
     return(
       <div>
-        <div id={"map-small_" + this.props.project.id} refs='map_canvas' className='right'>I will be a map someday</div>
-        <script async defer src={"https://maps.googleapis.com/maps/api/js?key=" + map_key + "&callback=initMap"}></script>
+        <div id={"map-small_" + this.props.project.id} ref='map_canvas' className='right'></div>
+        <script async defer src={"https://maps.googleapis.com/maps/api/js?key=" + map_key}></script>
       </div>
     )
   }
