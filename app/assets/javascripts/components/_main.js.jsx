@@ -6,7 +6,7 @@ var Main = React.createClass({
           <Header />
         </div>
         <div>
-          <Body map_key={this.props.map_key}/>
+          <Body />
         </div>
       </div>
     )
