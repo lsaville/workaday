@@ -14,8 +14,6 @@ var AllProjects = React.createClass({
         <div key={project.id} className='project-card container z-depth-2'>
           <div className='card-content left'>
             <h3>{project.title}</h3>
-            <p>lat: {project.lat}</p>
-            <p>lng: {project.lng}</p>
             <div className='details'>{project.details}</div>
           </div>
           <Map project={project} />
