@@ -67,7 +67,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'validates oauth_token_expires_at' do
-      user = build(:user, oauth_token_expires_at: nil)
+      user = build(:user, oauth_expires_at: nil)
       
       expect(user).to_not be_valid
     end
