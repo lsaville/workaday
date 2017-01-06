@@ -8,16 +8,18 @@ var AllProjects = React.createClass({
   },
 
   render() {
+    var map_key = this.props.map_key;
     var projects = this.state.projects.map((project) => {
       return(
-        <div key={project.id} className='project'>
-          <h3>{project.title}</h3>
-          <p>lat: {project.lat}</p>
-          <p>lng: {project.lng}</p>
-          <p>{project.details}</p>
+        <div key={project.id} className='project-card container z-depth-2'>
+          <div className='card-content left'>
+            <h3>{project.title}</h3>
+            <div className='details'>{project.details}</div>
+          </div>
+          <Map project={project} />
         </div>
       )
-    }); 
+    });
 
     return(
       <div>
