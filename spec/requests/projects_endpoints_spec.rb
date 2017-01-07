@@ -30,10 +30,10 @@ describe 'projects endpoint' do
       response_project = JSON.parse(response.body)
 
       expect(response).to be_success
-      expect(response_project['lat']).to eq(project.lat)
-      expect(response_project['lng']).to eq(project.lng)
-      expect(response_project['title']).to eq(project.title)
-      expect(response_project['details']).to eq(project.details)
+      expect(response_project['lat']).to eq(project.lat.to_s)
+      expect(response_project['lng']).to eq(project.lng.to_s)
+      expect(response_project['title']).to eq(project.title.to_s)
+      expect(response_project['details']).to eq(project.details.to_s)
     end
   end
 end
