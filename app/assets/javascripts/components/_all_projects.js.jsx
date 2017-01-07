@@ -22,7 +22,7 @@ var AllProjects = React.createClass({
     });
 
     return(
-      <div>
+      <div className="projects">
         {projects}
       </div>
     )
