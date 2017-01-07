@@ -3,3 +3,8 @@
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['map_key'] %>">
 </script>
+<script src="http://rubaxa.github.io/Sortable/Sortable.js"></script>
+<script>
+var el = document.getElementById('projects');
+var sortable = Sortable.create(el);
+</script>
