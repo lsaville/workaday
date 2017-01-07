@@ -17,3 +17,11 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+
+$(document).ready({
+	var thing = function() {
+		alert('hello');
+		$("ol.example").sortable();
+	}
+  thing();
+});
