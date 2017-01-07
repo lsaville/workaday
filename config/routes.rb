@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :projects do
         get '', to: 'projects#index'
+        get '/:id', to: 'projects#show'
       end
     end
   end
