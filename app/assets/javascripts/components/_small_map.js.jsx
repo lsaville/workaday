@@ -8,9 +8,10 @@ var SmallMap = React.createClass({
   createMap: function(){
     var mapOptions = {
       zoom: 7,
-      center: this.location
+      center: this.location,
+      disableDefaultUI: true
     }
-    new google.maps.Map(this.refs.map_canvas, mapOptions);
+    return new google.maps.Map(this.refs.map_canvas, mapOptions);
   },
 
   createMarker: function(){
