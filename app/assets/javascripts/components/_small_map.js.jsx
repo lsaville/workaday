@@ -1,4 +1,4 @@
-var Map = React.createClass({
+var SmallMap = React.createClass({
   componentDidMount() {
     this.location = new google.maps.LatLng(this.props.project.lat, this.props.project.lng);
     this.map = this.createMap();
