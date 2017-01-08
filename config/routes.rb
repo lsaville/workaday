@@ -14,8 +14,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       namespace :projects do
         get '',        to: 'projects#index'
-        get '/:id',    to: 'projects#show'
         post '',       to: 'projects#create'
+        get '/:id',    to: 'projects#show'
         put '/:id',    to: 'projects#update'
         patch '/:id',  to: 'projects#update'
         delete '/:id', to: 'projects#destroy'
