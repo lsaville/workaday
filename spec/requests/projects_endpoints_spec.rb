@@ -1,6 +1,31 @@
 require 'rails_helper'
 
 describe 'projects endpoint' do
+  context 'PUT /api/v1/projects/:id' do
+    it 'updates a given project and returns the project in json' do
+      project = create(:project)
+
+      data = {
+        project: {
+          lat: 48.858093,
+          lng: 2.294694,
+          title: 'great project',
+          details: 'sawhorseing'
+        }
+      }
+
+      put "/api/v1/projects/#{project.id}"
+
+      result = JSON.parse(response.body)
+
+      expect(response).to have_http_status(200)
+      expect(result['lat']).to eq('48.858093')
+      expect(result['lng']).to eq('2.294694')
+      expect(result['title']).to eq('great project')
+      expect(resilt['details']).to eq('sawhorseing')
+    end
+  end
+
   context 'POST /api/v1/projects' do
     it 'creates a new post and returns json' do
       data = {
