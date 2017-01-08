@@ -1,4 +1,4 @@
-var Header = React.createClass({
+var ProjectsHeader = React.createClass({
   render() {
     return (
       <div>
