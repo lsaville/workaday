@@ -14,7 +14,7 @@ describe 'projects endpoint' do
         }
       }
 
-      put "/api/v1/projects/#{project.id}"
+      put "/api/v1/projects/#{project.id}", data
 
       result = JSON.parse(response.body)
 
@@ -22,7 +22,7 @@ describe 'projects endpoint' do
       expect(result['lat']).to eq('48.858093')
       expect(result['lng']).to eq('2.294694')
       expect(result['title']).to eq('great project')
-      expect(resilt['details']).to eq('sawhorseing')
+      expect(result['details']).to eq('sawhorseing')
     end
   end
 
