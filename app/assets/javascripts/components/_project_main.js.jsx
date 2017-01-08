@@ -2,7 +2,7 @@ var ProjectMain = React.createClass({
   render() {
     return(
       <div>
-        <ProjectBody />
+        <ProjectBody id={this.props.id} />
       </div>
     )
   }
