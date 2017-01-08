@@ -1,4 +1,4 @@
-var Main = React.createClass({
+var ProjectsMain = React.createClass({
   render() {
     return (
       <div>
