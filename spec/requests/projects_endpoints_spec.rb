@@ -6,7 +6,7 @@ describe 'projects endpoint' do
       project = create(:project)
       count = Project.count
 
-      delete "/api/v1/projects/:id"
+      delete "/api/v1/projects/#{project.id}"
 
       result = JSON.parse(response.body)
 
