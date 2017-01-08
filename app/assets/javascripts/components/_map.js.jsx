@@ -7,7 +7,7 @@ var Map = React.createClass({
 
   createMap: function(){
     var mapOptions = {
-      zoom: 7,
+      zoom: 12,
       center: this.location
     }
     new google.maps.Map(this.refs.map_canvas, mapOptions);
@@ -18,7 +18,7 @@ var Map = React.createClass({
       position: this.location,
       map: this.map
     }
-    return new google.maps.Marker(markerOptions);
+    new google.maps.Marker(markerOptions);
   },
 
   render(){
