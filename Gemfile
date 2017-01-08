@@ -19,6 +19,7 @@ gem 'faker'
 gem 'omniauth-google-oauth2'
 gem 'materialize-sass'
 gem 'react-rails'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'poltergeist'
