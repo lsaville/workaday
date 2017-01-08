@@ -3,10 +3,10 @@ var Main = React.createClass({
     return (
       <div>
         <div>
-          <Header />
+          <ProjectsHeader />
         </div>
         <div>
-          <Body />
+          <ProjectsBody />
         </div>
       </div>
     )
