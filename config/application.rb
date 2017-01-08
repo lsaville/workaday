@@ -24,7 +24,7 @@ module Workaday
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'localhost:3000', '127.0.0.1.:3000', 'https://work-a-day.herokuapp.com'
-        resource '*', :headers => :any, :methods => [:get, :post, :patch, :put, :delete, :options]
+        resource '/api/*', :headers => :any, :methods => [:get, :post, :patch, :put, :delete, :options]
       end
     end
   end
