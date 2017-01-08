@@ -16,6 +16,7 @@ Rails.application.routes.draw do
         get '',     to: 'projects#index'
         get '/:id', to: 'projects#show'
         post '',    to: 'projects#create'
+        put '/:id', to: 'projects#update'
       end
     end
   end
