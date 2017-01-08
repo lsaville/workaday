@@ -1,4 +1,4 @@
-var Body = React.createClass({
+var ProjectsBody = React.createClass({
   render(){
     return (
       <div>
