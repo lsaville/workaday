@@ -1,6 +1,24 @@
 require 'rails_helper'
 
 describe 'projects endpoint' do
+  context 'DELETE /api/v1/projects/:id' do
+    it 'deletes a give project and returns the project in json' do
+      project = create(:project)
+      count = Project.count
+
+      delete "/api/v1/projects/#{project.id}"
+
+      result = JSON.parse(response.body)
+
+      expect(response).to have_http_status(200)
+      expect(result['title']).to eq(project.title)
+      expect(result['details']).to eq(project.details)
+      expect(result['lat']).to eq(project.lat.to_s)
+      expect(result['lng']).to eq(project.lng.to_s)
+      expect(Project.count).to eq(0)
+    end
+  end
+
   context 'PUT /api/v1/projects/:id' do
     it 'updates a given project and returns the project in json' do
       project = create(:project)
