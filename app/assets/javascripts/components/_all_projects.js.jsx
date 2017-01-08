@@ -11,7 +11,7 @@ var AllProjects = React.createClass({
     var map_key = this.props.map_key;
     var projects = this.state.projects.map((project) => {
       return(
-        <div key={project.id} className='project-card container z-depth-2'>
+        <div key={project.id} idName={project.id} className="project-card container z-depth-2">
           <div className='card-content left'>
             <h3>{project.title}</h3>
             <div className='details'>{project.details}</div>
@@ -22,7 +22,7 @@ var AllProjects = React.createClass({
     });
 
     return(
-      <div>
+      <div id="projects">
         {projects}
       </div>
     )

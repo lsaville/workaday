@@ -1,5 +1,16 @@
 <%= react_component 'Main' %>
 
+<ol class='example'>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+<div id="foo" class="foo-group">
+  <div class="foo-group-item">please sort me</div>
+  <div class="foo-group-item">sort</div>
+  <div class="foo-group-item">sorted</div>
+</div>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['map_key'] %>">
 </script>
+<script src='js/jquery-sortable.js'></script>
