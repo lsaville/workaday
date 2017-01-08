@@ -13,9 +13,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       namespace :projects do
-        get '',     to: 'projects#index'
-        get '/:id', to: 'projects#show'
-        post '',    to: 'projects#create'
+        get '',       to: 'projects#index'
+        get '/:id',   to: 'projects#show'
+        post '',      to: 'projects#create'
+        put '/:id',   to: 'projects#update'
+        patch '/:id', to: 'projects#update'
       end
     end
   end
