@@ -19,11 +19,11 @@ describe 'supervisor' do
 
       visit "/projects/#{project.id}"
 
-      expect(page).to have_content('project.title')
-      expect(page).to have_content('project.details')
-      expect(page).to have_button('Edit')
-      expect(page).to have_button('Delete')
-      expect(page).to have_button('Post Comment')
+      expect(page).to have_content(project.title)
+      expect(page).to have_content(project.details)
+      expect(page).to have_link('Edit')
+      expect(page).to have_link('Delete')
+      expect(page).to have_link('Post Comment')
     end
   end
 end
