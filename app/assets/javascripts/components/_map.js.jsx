@@ -16,6 +16,7 @@ var Map = React.createClass({
     };
     map = new google.maps.Map(this.refs.map_canvas, mapOptions);
     this.directionsDisplay.setMap(map);
+    this.directionsDisplay.setPanel(this.refs.map_panel);
     return map;
   },
 
@@ -44,6 +45,7 @@ var Map = React.createClass({
     return(
       <div>
         <div id={'map'} ref='map_canvas' className='z-depth-2'>I will be a map someday!</div>
+        <div id='right-panel' ref='map_panel' className='z-depth-2'></div>
       </div>
     )
   }
