@@ -7,7 +7,7 @@ var SmallMap = React.createClass({
 
   createMap: function(){
     var mapOptions = {
-      zoom: 7,
+      zoom: 12,
       center: this.location,
       disableDefaultUI: true
     }
