@@ -26,9 +26,37 @@ overflow: auto;
 }
 
 #map {
-  width: 600px;
+  width: 60%;
   height: 400px;
   background-color: white;
+  float: left;
+}
+
+#right-panel {
+  border: 1px solid #BDBDBD;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+#right-panel {
+  background-color: white;
+  height: 400px;
+  float: right;
+  width: 390px;
+  overflow: auto;
 }
 
 .container.project {
@@ -36,4 +64,5 @@ overflow: auto;
   width: 80%;
   padding: 20px;
   margin-top: 20px;
+  overflow: auto;
 }
