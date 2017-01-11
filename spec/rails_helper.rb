@@ -8,6 +8,7 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
+Capybara.server_port = 3001
 Capybara.register_driver :poltergeist do |app|
     Capybara::Poltergeist::Driver.new(app, {:js_errors => false})
 end

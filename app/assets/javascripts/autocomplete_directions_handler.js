@@ -5,8 +5,9 @@ function AutocompleteDirectionsHandler(mapComponent) {
   var originInput = mapComponent.refs.origin_input;
   this.directionsService = new google.maps.DirectionsService();
   this.directionsDisplay = new google.maps.DirectionsRenderer();
+  this.mapPanel = mapComponent.refs.map_panel;
   this.directionsDisplay.setMap(this.map);
-  this.directionsDisplay.setPanel(mapComponent.refs.map_panel);
+  this.directionsDisplay.setPanel(this.mapPanel);
   var originAutocomplete = new google.maps.places.Autocomplete(originInput, {placeIdOnly: true});
   this.setupPlaceChangedListener(originAutocomplete, "ORIG");
   this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
@@ -38,6 +39,7 @@ AutocompleteDirectionsHandler.prototype.route = function() {
     travelMode: "DRIVING"
   }, function(response, status) {
     if (status === 'OK') {
+      me.mapPanel.className = me.mapPanel.className.replace('no-collapse-hide','');
       me.directionsDisplay.setDirections(response);
     } else {
       window.alert('Directions request failed due to ' + status);
