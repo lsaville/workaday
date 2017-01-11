@@ -16,7 +16,7 @@ var AllProjects = React.createClass({
             <h3>{project.title}</h3>
             <div className='details'>{project.details}</div>
           </div>
-          <Map project={project} />
+          <SmallMap project={project} />
         </div>
       )
     });

@@ -1,16 +1,19 @@
 var Map = React.createClass({
   componentDidMount() {
-    this.location = new google.maps.LatLng(this.props.project.lat, this.props.project.lng);
+    this.location = new google.maps.LatLng(this.props.lat, this.props.lng);
     this.map = this.createMap();
     this.marker = this.createMarker();
+    new AutocompleteDirectionsHandler(this);
   },
 
-  createMap: function(){
+  createMap: function() {
     var mapOptions = {
-      zoom: 7,
+      mapTypeControl: false,
+      zoom: 12,
       center: this.location
-    }
-    new google.maps.Map(this.refs.map_canvas, mapOptions);
+    };
+    map = new google.maps.Map(this.refs.map_canvas, mapOptions);
+    return map;
   },
 
   createMarker: function(){
@@ -24,7 +27,9 @@ var Map = React.createClass({
   render(){
     return(
       <div>
-        <div id={"map-small"} ref='map_canvas' className='right z-depth-2'>I will be a map someday!</div>
+        <input id="origin-input" ref="origin_input" className="controls input-field" type="text" placeholder="Get Directions" />
+        <div id={'map'} ref='map_canvas' className='z-depth-2'></div>
+        <div id='right-panel' ref='map_panel' className='z-depth-2'></div>
       </div>
     )
   }

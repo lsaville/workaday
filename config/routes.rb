@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'dashboard#index'
 
-  resources :projects, only: [:index]
+  resources :projects, only: [:index, :show]
 
   namespace :api do
     namespace :v1 do

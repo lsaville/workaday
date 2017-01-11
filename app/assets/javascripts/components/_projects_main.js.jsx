@@ -1,12 +1,12 @@
-var Main = React.createClass({
+var ProjectsMain = React.createClass({
   render() {
     return (
       <div>
         <div>
-          <Header />
+          <ProjectsHeader />
         </div>
         <div>
-          <Body />
+          <ProjectsBody />
         </div>
       </div>
     )

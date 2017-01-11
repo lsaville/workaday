@@ -1,3 +1,8 @@
+.project-btn {
+  margin: 7px;
+  margin-top: 15px;
+}
+
 .login {
   background-color: #efefef;
   margin-top: 50px;
@@ -19,8 +24,75 @@ overflow: auto;
   width: 300px;
 }
 
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  margin-top: 10px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 200px;
+  z-index: 1000;
+}
+
 #map-small {
   width: 300px;
   height: 300px;
   background-color: white;
+}
+
+#map {
+  width: 60%;
+  height: 400px;
+  background-color: white;
+  float: left;
+}
+
+#right-panel {
+  border: 1px solid #BDBDBD;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#right-panel select, #right-panel input {
+  font-size: 15px;
+}
+
+#right-panel select {
+  width: 100%;
+}
+
+#right-panel i {
+  font-size: 12px;
+}
+
+#right-panel {
+  background-color: white;
+  height: 400px;
+  float: right;
+  width: 390px;
+  overflow: auto;
+}
+
+.container.project {
+  background-color: #efefef;
+  width: 80%;
+  padding: 20px;
+  margin-top: 20px;
+  overflow: auto;
 }
