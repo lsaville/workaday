@@ -1,18 +1,5 @@
 <%= react_component 'ProjectMain', id: params[:id]%>
-<!--
-<div class='container'>
-  <div>
-    <h1><#%= @project.title %></h1>
-    <p><#%= @project.details %></p>
-    <a class="waves-effect waves-light btn z-depth-2" id="project-edit" href="#">Edit</a>
-    <a class="waves-effect waves-light btn z-depth-2" id="project-delete" href="#">Delete</a>
-  </div>
-  <div>
-    <h3>Comments</h3>
-    <a class="waves-effect waves-light btn z-depth-2" id="comment-create" href="#">Post Comment</a>
-  </div>
-</div>
--->
+
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['map_key'] %>">
+src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['map_key'] %>&libraries=places">
 </script>
