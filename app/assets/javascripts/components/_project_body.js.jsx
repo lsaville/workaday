@@ -13,7 +13,10 @@ var ProjectBody = React.createClass({
       <div>
         <div className="container project">
           <h1>{this.state.project.title}</h1>
+          <p>{this.state.project.details}</p>
           <Map lat={this.state.project.lat} lng={this.state.project.lng}/>
+          <a href="#" className="project-btn waves-effect waves-light btn z-depth-2">Edit</a>
+          <a href="#" className="project-btn waves-effect waves-light btn z-depth-2">Delete</a>
         </div>
         <div>
           <ProjectComments />
