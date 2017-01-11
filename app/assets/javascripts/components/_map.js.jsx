@@ -29,7 +29,7 @@ var Map = React.createClass({
       <div>
         <input id="origin-input" ref="origin_input" className="controls input-field" type="text" placeholder="Get Directions" />
         <div id={'map'} ref='map_canvas' className='z-depth-2'></div>
-        <div id='right-panel' ref='map_panel' className='z-depth-2'></div>
+        <div id='right-panel' ref='map_panel' className='no-collapse-hide z-depth-2'></div>
       </div>
     )
   }
