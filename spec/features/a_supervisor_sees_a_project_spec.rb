@@ -12,7 +12,7 @@ require 'rails_helper'
 
 describe 'supervisor' do
   context 'visits project page' do
-    scenario 'and sees project' do
+    scenario 'and sees project', :js => true do
       supervisor = create(:user)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(supervisor)
       project = create(:project)
