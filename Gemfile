@@ -19,6 +19,7 @@ gem 'faker'
 gem 'omniauth-google-oauth2'
 gem 'materialize-sass'
 gem 'react-rails'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'poltergeist'
