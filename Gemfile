@@ -20,6 +20,7 @@ gem 'omniauth-google-oauth2'
 gem 'materialize-sass'
 gem 'react-rails'
 gem 'newrelic_rpm'
+gem 'metric_fu', git: 'https://github.com/bergholdt/metric_fu.git'
 
 group :development, :test do
   gem 'poltergeist'
