@@ -6,7 +6,7 @@
 https://work-a-day.herokuapp.com/
 
 ###What it is
-A project built for self-directed work at [Turing](https://www.turing.io/). I spent two weeks on the current functionality of WorkaDay, diving head-first into react on rails and using the google maps api to acheive autocomplete directions for each of the project locations. This represents my first immersion in the world of javascript.
+A project built for self-directed work at [Turing](https://www.turing.io/). I spent two weeks on the current functionality of WorkaDay, diving head-first into react on rails and using the google maps api to achieve autocomplete directions for each of the project locations. This represents my first immersion in the world of javascript.
 
 WorkaDay as an overarching idea is a project management tool for small firm construction outfits. It strives to remove missing communication between the supervisor of a project, the crew who is doing the work, and the home-owner. Each project has a location which can be used by workers to get directions. Additionally the supervisor and homeowner can add comments/directions for the specific work to be done. This helps to keep all of the parties involved in the construction project on the same page.
 
