@@ -1,4 +1,4 @@
-#WorkaDay
+# WorkaDay
 
 ![image of workaday directions autocomplete](https://github.com/lsaville/readme-screenshots/blob/master/workaday/Screen%20Shot%202017-02-12%20at%207.54.24%20AM.png?raw=true)
 
